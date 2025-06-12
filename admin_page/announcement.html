@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Create Announcement</title>
+  <link rel="stylesheet" href="../styles/ad_style.css">
+</head>
+
+<body>
+  <nav>
+    <a href="../main.html">Home</a>
+    <a href="./add_student.html">Add Student</a>
+    <a href="manage_students.html">Manage Students</a>
+    <a class="active" href="announcement.html">Announcements</a>
+  </nav>
+  <div class="content">
+    <h2>Create Announcement</h2>
+    <form id="announcementForm">
+      <input type="text" name="title" placeholder="Title" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">Post</button>
+    </form>
+    <h3>Previous Announcements:</h3>
+    <div id="announcementList"></div>
+
+    <div id="response"></div>
+  </div>
+  <script src="../static/announcement.js"></script>
+</body>
+
+</html>
