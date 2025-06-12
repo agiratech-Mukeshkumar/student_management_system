@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Manage Students</title>
+  <link rel="stylesheet" href="../styles/ad_style.css">
+</head>
+
+<body>
+
+  <nav>
+    <a href="../main.html">Home</a>
+    <a href="add_student.html">Add Student</a>
+    <a class="active" href="manage_students.html">Manage Students</a>
+    <a href="announcement.html">Announcements</a>
+  </nav>
+
+  <div class="content">
+    <h2>Students List</h2>
+    <table class="manage_table" border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>DOB</th>
+          <th>Grades</th>
+          <th>Attendance</th>
+          <th>Fees</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="studentsTable"></tbody>
+    </table>
+
+
+    
+    <div id="editFormContainer" style="display:none;">
+      <h3>Edit Student</h3>
+      <form id="editStudentForm">
+        <input type="hidden" id="editId">
+        <input type="text" id="editName" placeholder="Name" required>
+        <input type="email" id="editEmail" placeholder="Email" required>
+        <input type="text" id="editPhone" placeholder="Phone" required>
+        <input type="date" id="editDob" required>
+        <input type="text" id="editGrades" placeholder="Grades">
+        <input type="number" id="editAttendance" placeholder="Attendance">
+        <input type="number" id="editFees" placeholder="Fees">
+        <button type="submit">Update</button>
+        <button type="button" onclick="cancelEdit()">Cancel</button>
+      </form>
+    </div>
+  </div>
+  <script src="../static/manage_stu.js"></script>
+</body>
+
+</html>
