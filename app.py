@@ -6,26 +6,26 @@ import os
 app = Flask(__name__, static_folder='static')
 CORS(app)
 
-# ✅ Serve add_student.html at root URL
+
 @app.route('/')
 def serve_add_student():
     return send_from_directory('.', 'main.html')
 
-# ✅ Serve any other static file (HTML, CSS, JS, etc.)
+
 @app.route('/<path:filename>')
 def serve_any_file(filename):
     return send_from_directory('.', filename)
 
-# ✅ Handle POST to /add_student
+
 @app.route('/add_student', methods=['POST'])
 def add_student():
     data = request.get_json()
     try:
         conn = mysql.connector.connect(
             host='localhost',
-            user='root',       # ← Change this
-            password='root',   # ← Change this
-            database='student_system'    # ← Change this
+            user='root',       
+            password='root',   
+            database='student_system'    
         )
         cursor = conn.cursor()
         query = """
@@ -72,7 +72,7 @@ def create_announcement():
         return jsonify({'message': f'Error: {str(e)}'}), 500
 
 
-# 🔹 Fetch all students
+
 @app.route('/students', methods=['GET'])
 def get_students():
     try:
@@ -91,7 +91,7 @@ def get_students():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-# 🔹 Delete a student by ID
+
 @app.route('/delete_student/<int:student_id>', methods=['DELETE'])
 def delete_student(student_id):
     try:
@@ -110,7 +110,7 @@ def delete_student(student_id):
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-# 🔹 Update a student by ID
+
 @app.route('/update_student/<int:student_id>', methods=['PUT'])
 def update_student(student_id):
     data = request.get_json()
