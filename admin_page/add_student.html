@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Add Student</title>
+  <link rel="stylesheet" href="../styles/ad_style.css">
+</head>
+
+<body>
+  <nav>
+    <a href="../main.html">Home</a>
+    <a class="active" href="add_student.html">Add Student</a>
+    <a href="manage_students.html">Manage Students</a>
+    <a href="announcement.html">Announcements</a>
+  </nav>
+  <div class="content">
+    <h2>Add Student</h2>
+    <form id="studentForm">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="phone" placeholder="Phone" required>
+      <input type="date" name="dob" required>
+      <input type="text" name="grades" placeholder="Grades">
+      <input type="number" name="attendance" placeholder="Attendance %">
+      <input type="number" name="fees" placeholder="Fees">
+      <button type="submit">Add</button>
+    </form>
+    <div id="response"></div>
+  </div>
+  <script src="../static/add_stu.js"></script>
+</body>
+
+</html>
