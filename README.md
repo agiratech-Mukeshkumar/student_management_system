@@ -38,8 +38,8 @@
 | phone      | VARCHAR  |
 | dob        | DATE     |
 | grades     | TEXT     |
-| attendance | TEXT     |
-| fees       | DECIMAL  |
+| attendance | FLOAT    |
+| fees       | FLOAT    |
 
 ### Table: `announcements`
 | Column     | Type     |
